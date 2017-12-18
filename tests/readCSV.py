@@ -11,7 +11,8 @@ def test_run():
 	print "High column min = "
 	print df['High'].min()
 
-	print df
+	print df['Close']
+#	print df
 
 if __name__ == '__main__':
 	test_run()
