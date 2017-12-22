@@ -30,5 +30,12 @@ def test_run():
 	#create random array
 	print np.random.random((5,4))
 
+	print
+
+	#create random array with tuple
+	print np.random.rand(5,4)
+
+
+	
 if __name__ == "__main__":
 	test_run()
