@@ -61,5 +61,9 @@ def test_run():
 	#find index of max element in array
 	print np.argmax(a)
 
+
+	#access elements
+	print a[3,2]
+	print a[0,1:3]
 if __name__ == "__main__":
 	test_run()
