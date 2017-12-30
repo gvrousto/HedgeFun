@@ -76,6 +76,14 @@ def test_run():
 	indices = np.array([1,1,2,3])
 	print a[indices]
 
+	#boolean mask arrays
+	mean = a.mean()
+	print a[a<mean]
+
+	#multiply all by 2
+	print 2*a
+
+	#matrix mulitplication and addition is the same as linear algebra
 
 if __name__ == "__main__":
 	test_run()
