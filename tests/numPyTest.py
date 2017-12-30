@@ -71,6 +71,10 @@ def test_run():
 	a[1,:] = 6
 	a[:,3] = [1,2,3,4,5]
 	print a
+	
+	#indexing array
+	indices = np.array([1,1,2,3])
+	print a[indices]
 
 
 if __name__ == "__main__":
