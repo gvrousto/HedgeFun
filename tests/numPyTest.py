@@ -35,7 +35,13 @@ def test_run():
 	#create random array with tuple
 	print np.random.rand(5,4)
 
+	#get rows and columns of matrix
+	a = np.random.rand(5,4)
+	print a.shape
+	# a.shape[0] rows
+	# a.shape[1] columns
 
-	
+	#number of elements in the array
+	print a.size
 if __name__ == "__main__":
 	test_run()
