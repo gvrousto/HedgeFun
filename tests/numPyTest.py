@@ -36,12 +36,30 @@ def test_run():
 	print np.random.rand(5,4)
 
 	#get rows and columns of matrix
-	a = np.random.rand(5,4)
+	np.random.seed(693)
+	a = np.random.randint(0, 10, size =(5,4))
 	print a.shape
 	# a.shape[0] rows
 	# a.shape[1] columns
 
 	#number of elements in the array
 	print a.size
+
+	#sum of all elements
+	print a.sum()
+
+	#(axis: 0 = rows 1 = columns) sum specific direction of array
+	print a.sum(axis=0)
+	print a.sum(axis=1)
+
+	#max and min in each row
+	print a.min(axis=0)
+	print a.max(axis=1)
+	print a.mean()
+
+
+	#find index of max element in array
+	print np.argmax(a)
+
 if __name__ == "__main__":
 	test_run()
