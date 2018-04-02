@@ -34,8 +34,10 @@ def plot_data(df):
 	ax = df.plot(title=title,fontsize=2)
 	ax.set_xlabel("Date")
 	ax.set_ylabel("Price")
-	plt.show()	
-
+	plt.show()
+	
 if __name__ == '__main__':
 	df = test_run()
+	print df.mean()
+	print df.std()
 	plot_data(df)	

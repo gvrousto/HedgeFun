@@ -2,7 +2,7 @@ import pandas as pd
 
 def test_run():
 
-	df = pd.read_csv("./AAPL.csv")
+	df = pd.read_csv("data/AAPL.csv")
 
 	print "High column max = " 
 	print df['High'].max()

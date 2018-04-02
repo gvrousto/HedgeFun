@@ -1,5 +1,7 @@
 import json, hmac, hashlib, time, requests, base64
 from requests.auth import AuthBase
+import websocket
+
 
 # Create custom authentication for Exchange
 class CoinbaseExchangeAuth(AuthBase):
@@ -34,8 +36,18 @@ auth = CoinbaseExchangeAuth(API_KEY, API_SECRET, API_PASS)
 # Get accounts
 r = requests.get(api_url + 'accounts', auth=auth)
 print r.json()
+print('balances')
 for index in r.json():
 	print index['balance']
 # [{"id": "a1b2c3d4", "balance":...
 
+
+const ws = new Gdax.WebsocketClient(['LTC-USD']);
+
+ws.on('message', function(data) { 
+	/* work with data */ 
+	if (data['type'] == 'received') {
+		console.log(data);	
+	}
+});
 
